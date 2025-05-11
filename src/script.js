@@ -7,14 +7,15 @@ function displayPoem(response) {
     cursor: "",
   });
 }
+
 function generatePoem(event) {
-  event.preventDefedfault();
+  event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "449918400f26bobdf44b32689d6tafaa";
   let prompt = `Generate a poem about ${instructionsInput.value}`;
-  let context = "Write a poem about a rose and a tomb";
-  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${key}`;
+  let context = "Write 4 line poem about a rose and a tombs";
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   console.log("generating poem");
 
